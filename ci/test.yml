@@ -4,8 +4,8 @@ platform: linux
 image_resource:
   type: registry-image
   source:
-    repository: ubuntu
-    tag: jammy
+    repository: debian
+    tag: bookworm
 
 inputs:
 - name: gambatte-core
