@@ -1,9 +1,12 @@
 # force rebuild, while deps isn't working
-.PHONY: libgb.so clean run runc all ci
+.PHONY: libgb.so clean run runc all ci deps
 
 all: libgb.so main
 
-ci: libgb.so main
+deps:
+	apt install -y g++ libsdl2-dev
+
+ci: deps libgb.so main
 
 # TODO: re-add O3
 EMBEDFLAGS=-O3 -fvisibility=hidden -static-libstdc++ -fPIC -Wfatal-errors -Werror -Wno-narrowing
