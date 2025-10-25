@@ -1,7 +1,9 @@
 # force rebuild, while deps isn't working
-.PHONY: libgb.so clean run runc
+.PHONY: libgb.so clean run runc all ci
 
 all: libgb.so main
+
+ci: libgb.so main
 
 # TODO: re-add O3
 EMBEDFLAGS=-O3 -fvisibility=hidden -static-libstdc++ -fPIC -Wfatal-errors -Werror -Wno-narrowing

@@ -1,0 +1,21 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source:
+    repository: ubuntu
+    tag: jammy
+
+inputs:
+- name: gambatte-core
+
+run:
+  path: /bin/bash
+  args:
+  - -c
+  - |
+    cd gambatte-core
+    apt install -y make
+    make ci
+
