@@ -16,6 +16,7 @@ run:
   - -c
   - |
     cd gambatte-core
+    export DEBIAN_FRONTEND=noninteractive
     apt update && apt install -y make
     make ci
 
