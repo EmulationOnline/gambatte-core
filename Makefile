@@ -1,5 +1,7 @@
 # force rebuild, while deps isn't working
-.PHONY: libgb.so clean run runc all ci deps deps-main
+.PHONY: libgb.so clean run runc all ci deps deps-main default
+
+default: libgb.so
 
 all: libgb.so main
 
